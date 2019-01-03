@@ -6,8 +6,15 @@ class Account extends StatefulWidget {
 class _AccountState extends State<Account> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text('记账'),
+        return Scaffold(
+         appBar: AppBar(
+        title: Text('鲨鱼记账',
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400)),
+      ),
+      body:Text('记账')
     );
   }
 }

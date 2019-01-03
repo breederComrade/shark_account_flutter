@@ -47,13 +47,7 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title,
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontWeight: FontWeight.w400)),
-      ),
+   
       body: _pageList[_selectedIndex],
       bottomNavigationBar:BottomNavigationBar(
        items: <BottomNavigationBarItem>[

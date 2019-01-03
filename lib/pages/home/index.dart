@@ -10,6 +10,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return  Text('Home');
+    return  Scaffold(
+         appBar: AppBar(
+        title: Text('鲨鱼记账',
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400)),
+      ),
+      body:Text('首页')
+    );
   }
 }

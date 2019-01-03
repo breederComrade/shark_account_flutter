@@ -7,8 +7,15 @@ class User extends StatefulWidget {
 class _UserState extends State<User> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-       child: Text('User'),
+       return Scaffold(
+         appBar: AppBar(
+        title: Text('我的',
+            style: TextStyle(
+                color: Colors.black,
+                fontSize: 20.0,
+                fontWeight: FontWeight.w400)),
+      ),
+      body:Text('我的')
     );
   }
 }
