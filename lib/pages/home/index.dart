@@ -12,7 +12,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return  Scaffold(
          appBar: AppBar(
-        title: Text('鲨鱼记账',
+        title: Text('鱿鱼记账',
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 20.0,
