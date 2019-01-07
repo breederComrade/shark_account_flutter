@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: '鲨鱼记账',
       theme: ThemeData(primaryColor: themeColor, fontFamily: 'PingFang SC'),
       // home: MyHomePage(title: '鲨鱼记账'),
+      
       home: Demo(title: '鲨鱼记账'),
     );
   }
