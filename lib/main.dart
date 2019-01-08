@@ -17,6 +17,8 @@ class MyApp extends StatelessWidget {
       // home: MyHomePage(title: '鲨鱼记账'),
       
       home: Demo(title: '鲨鱼记账'),
+      // 关闭
+      debugShowCheckedModeBanner: false,
     );
   }
 }

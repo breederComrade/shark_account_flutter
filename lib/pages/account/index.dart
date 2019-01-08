@@ -8,7 +8,7 @@ class _AccountState extends State<Account> {
   Widget build(BuildContext context) {
         return Scaffold(
          appBar: AppBar(
-        title: Text('鲨鱼记账',
+        title: Text('记账',
             style: TextStyle(
                 color: Colors.black,
                 fontSize: 20.0,

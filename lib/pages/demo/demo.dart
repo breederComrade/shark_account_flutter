@@ -72,10 +72,61 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
       floatingActionButton:FloatingActionButton(
         elevation: 0.0,
         onPressed: (){
-           Navigator.of(context)
-                .push(MaterialPageRoute(builder: (BuildContext context) {
-              return Account();
-            }));
+          //  Navigator.of(context)
+          //       .push(MaterialPageRoute(builder: (BuildContext context) {
+          //     return Account();
+          //   }));
+          /* 
+            Navigator.of(context).push(new PageRouteBuilder(
+        opaque: false,
+        pageBuilder: (BuildContext context, _, __) {
+          return CompanyDetail(company);
+        },
+        transitionsBuilder: (_, Animation<double> animation, __, Widget child) {
+          return new FadeTransition(
+            opacity: animation,
+            child: new SlideTransition(
+                position: new Tween<Offset>(
+                  begin: const Offset(0.0, 1.0),
+                  end: Offset.zero,
+                ).animate(animation),
+                child: child),
+          );
+        }));
+          
+          
+           */
+            Navigator.of(context).push(
+              PageRouteBuilder(
+                pageBuilder: (BuildContext context, _, __) {
+          return Account();
+        },
+        opaque: false,
+        transitionDuration: Duration(seconds: 1),
+          transitionsBuilder: (_,Animation<double> animation ,__,Widget child){
+        /*     return FadeTransition(
+              opacity: animation,
+              child: SlideTransition(
+                position: Tween<Offset>( begin: const Offset(0.0, 1.0),
+                  end: Offset.zero,).animate(animation),
+                  child: child,
+              ),
+             
+            ); */
+
+            return SlideTransition(   position: Tween<Offset>( begin: const Offset(0.0, 1.0),
+                  end: Offset.zero,).animate(animation),
+                  child: child);
+
+          }
+              )
+              );
+
+
+
+
+
+
         },
         backgroundColor: _tabColor,
         child: Center(
