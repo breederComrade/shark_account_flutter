@@ -6,7 +6,6 @@ import 'package:shark_account_flutter/pages/discover/index.dart';
 import 'package:shark_account_flutter/pages/home/index.dart';
 import 'package:shark_account_flutter/util/ThemeUtils.dart';
 
-
 //导航类
 class NavigationIconView {
   NavigationIconView({Widget icon, Widget title, TickerProvider vsync})
@@ -48,37 +47,6 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
   Color _tabColor = ThemeUtils.currentColorTheme;
 
   // tabaItems
-  
- // 构建item
-    Widget _buildTabItem({tabMap item,int index,ValueChanged<int> onPressed}){
-
-       Color color = _selectedIndex==index?Theme.of(context).primaryColor:Colors.grey;
-      return Expanded(child: SizedBox(
-            height:50.0,
-            child: Material(
-              type: MaterialType.transparency,
-              child: InkWell(
-              onTap:(){
-                if(index !=2){
-                   onPressed(index);
-                }
-                
-              },
-              child: Column(
-                children: <Widget>[
-                  Padding(padding: EdgeInsets.only(top: 5.0),child: Icon(item.iconData,color:color,size: 25.0,),),
-                  Text(item.text,style: TextStyle(
-                    color: Colors.grey,fontSize: 12.0
-                  ),)
-
-                ],
-              ),
-
-              ),
-            ),
-      ),);
-    }
-
     var _tabList =[
       tabMap(iconData: Icons.album,text:'明细'),
       tabMap(iconData: Icons.face,text:'图表'),
@@ -131,9 +99,34 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
     );
   }
 
+// 构建item
+    Widget _buildTabItem({tabMap item,int index,ValueChanged<int> onPressed}){
+       Color color = _selectedIndex==index?Theme.of(context).primaryColor:Colors.grey;
+      return Expanded(child: SizedBox(
+            height:50.0,
+            child: Material(
+              type: MaterialType.transparency,
+              child: InkWell(
+              onTap:(){
+                if(index !=2){
+                   onPressed(index);
+                }
+                
+              },
+              child: Column(
+                children: <Widget>[
+                  Padding(padding: EdgeInsets.only(top: 5.0),child: Icon(item.iconData,color:color,size: 25.0,),),
+                  Text(item.text,style: TextStyle(
+                    color: Colors.grey,fontSize: 12.0
+                  ),)
 
+                ],
+              ),
 
-// 
+              ),
+            ),
+      ),);
+    }
 
 
 
