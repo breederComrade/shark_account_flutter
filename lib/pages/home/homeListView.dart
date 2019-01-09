@@ -16,22 +16,50 @@ class _homeListViewState extends State<homeListView> {
   List<Map> list = [];
   _getList() async {
     var homelist = await homeList();
-    print('homelist$homelist');
+    var sync_data = homelist['data']['sync_data'];
+    for (var i = 0; i < sync_data.length; i++) {
+      var target = sync_data[i];
+      var show = target['expenditure']['show'];
+      for (var b = 0; b < show.length; b++) {
+        var showItem = show[b];
+        list.add(showItem);
+      }
+    }
+    print('list$list');
   }
+
   void initState() {
     super.initState();
-       _getList();
-       setState(() {
-              });
+    setState(() {
+    });
   }
+
   @override
   Widget build(BuildContext context) {
+      _getList();
     return new ListView(
-      // children: <Widget>[Text('fddd')],
       children: list.map((Map item) {
-        // var word  = item.typeName??null;
-        print(item);
-        return Text('222'); //News接收2个参数（标题和图片url）
+        print('ffff$item');
+        return Row(
+          
+          children: <Widget>[
+           
+           Container(
+             padding: EdgeInsets.all(5.0),
+
+             decoration: BoxDecoration(
+               borderRadius: BorderRadius.all(Radius.circular(100)),
+             color: Colors.grey,
+
+             ),
+             child:  Icon(Icons.accessibility),
+           ),
+            Expanded(
+              child: Text(item['typeName']),
+            ) ,
+            Text(item['typeID'])
+          ],
+        ); //News接收2个参数（标题和图片url）
       }).toList(),
     );
   }
