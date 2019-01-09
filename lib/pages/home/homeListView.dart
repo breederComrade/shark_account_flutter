@@ -11,10 +11,15 @@ class homeListView extends StatefulWidget {
 // 渲染列表项
 // 列表布局
 
-class _homeListViewState extends State<homeListView> {
+// class _homeListViewState extends State<homeListView> with AutomaticKeepAliveClientMixin {
+class _homeListViewState extends State<homeListView>  {
+  //  @protected
+  // bool get wantKeepAlive=>true;
+
   // 请求数据
-  List<Map> list = [];
+  List<Map> list=[];
   _getList() async {
+    // print('_getList$list');
     var homelist = await homeList();
     var sync_data = homelist['data']['sync_data'];
     for (var i = 0; i < sync_data.length; i++) {
@@ -25,32 +30,30 @@ class _homeListViewState extends State<homeListView> {
         list.add(showItem);
       }
     }
-    print('list$list');
+    setState(() {
+          
+        });
   }
 
   void initState() {
     super.initState();
     setState(() {
+      
     });
   }
 
   @override
   Widget build(BuildContext context) {
-      _getList();
+     _getList();
     return new ListView(
       children: list.map((Map item) {
-        print('ffff$item');
         return Row(
-          
           children: <Widget>[
-           
            Container(
              padding: EdgeInsets.all(5.0),
-
              decoration: BoxDecoration(
                borderRadius: BorderRadius.all(Radius.circular(100)),
              color: Colors.grey,
-
              ),
              child:  Icon(Icons.accessibility),
            ),

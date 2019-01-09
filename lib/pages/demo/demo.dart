@@ -93,54 +93,39 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
                 ).animate(animation),
                 child: child),
           );
-        }));
-          
-          
+        }));         
            */
-
             //  命名路由
             // Navigator.of(context).pushNamed('/account');
-
-
-
-
             Navigator.of(context).push(
               PageRouteBuilder(
                 pageBuilder: (BuildContext context, _, __) {
                         return Account();
-        },
-        opaque: false,
-        transitionDuration: Duration(milliseconds: 400),
-          transitionsBuilder: (_,Animation<double> animation ,__,Widget child){
-        /*     return FadeTransition(
-              opacity: animation,
-              child: SlideTransition(
-                position: Tween<Offset>( begin: const Offset(0.0, 1.0),
-                  end: Offset.zero,).animate(animation),
-                  child: child,
-              ),
-             
-            ); */
+                },
+                opaque: false,
+                transitionDuration: Duration(milliseconds: 400),
+                transitionsBuilder: (_,Animation<double> animation ,__,Widget child){
+                  /*     return FadeTransition(
+                        opacity: animation,
+                        child: SlideTransition(
+                          position: Tween<Offset>( begin: const Offset(0.0, 1.0),
+                            end: Offset.zero,).animate(animation),
+                            child: child,
+                        ),
+                      
+                      ); */
 
-            return SlideTransition(   position: Tween<Offset>( begin: const Offset(0.0, 1.0),
-                  end: Offset.zero,).animate(animation),
-                  child: child);
-
-          }
-              )
-              );
-
-
-
-
-
-
+                      return SlideTransition(position: Tween<Offset>( begin: const Offset(0.0, 1.0),
+                            end: Offset.zero,).animate(animation),
+                            child: child);
+                    }
+                )
+           );
         },
         backgroundColor: _tabColor,
         child: Center(
           child: 
              Icon(Icons.add,color: Colors.black,size: 30.0,)
-          ,
         ),
       ),
       body: _pageList[_selectedIndex],
