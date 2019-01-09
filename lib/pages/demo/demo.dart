@@ -69,6 +69,7 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
     });
   
     return Scaffold(
+      
       floatingActionButton:FloatingActionButton(
         elevation: 0.0,
         onPressed: (){
@@ -96,13 +97,20 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
           
           
            */
+
+            //  命名路由
+            // Navigator.of(context).pushNamed('/account');
+
+
+
+
             Navigator.of(context).push(
               PageRouteBuilder(
                 pageBuilder: (BuildContext context, _, __) {
-          return Account();
+                        return Account();
         },
         opaque: false,
-        transitionDuration: Duration(seconds: 1),
+        transitionDuration: Duration(milliseconds: 400),
           transitionsBuilder: (_,Animation<double> animation ,__,Widget child){
         /*     return FadeTransition(
               opacity: animation,

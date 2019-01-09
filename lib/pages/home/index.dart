@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:shark_account_flutter/pages/home/homeListView.dart';
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -59,6 +59,7 @@ class _MyHomePageState extends State<MyHomePage> {
         return new Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
+            
           
             new ListTile(
               leading: Icon(Icons.ac_unit),
@@ -124,38 +125,41 @@ class _MyHomePageState extends State<MyHomePage> {
                 fontSize: 20.0,
                 fontWeight: FontWeight.w400)),
       ),
-      body: Center(
-        child: Row(children: <Widget>[
-          Column(children: <Widget>[
-            RaisedButton(
-          child: Text('测试弹出路由11'),
-          onPressed: () {
-            print('开始弹出路由');
-            // _openNewPage();
-            // _openModel();
-            _openNewPage2();
-          },
-        ),
-        Container(
-           padding: EdgeInsets.all(10.0),
-           decoration: BoxDecoration(
-              // border: Border.all(color:Colors.blue,width: 1.0),
-              border:Border(
-                top:BorderSide(width: 1.0,color: Colors.grey),
-                right: BorderSide(width: 1.0,color:Colors.grey),
-                bottom: BorderSide(width: 1.0,color:Colors.grey),
-                left: BorderSide(width: 1.0,color:Colors.grey),
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(100.0))
-            ),
-          child: ClipOval(
-            child: Text('22'),
+      // body: Center(
+        // child: Row(children: <Widget>[
+        //   Column(children: <Widget>[
+        //     RaisedButton(
+        //   child: Text('测试弹出路由11'),
+        //   onPressed: () {
+        //     print('开始弹出路由');
+        //     // _openNewPage();
+        //     // _openModel();
+        //     _openNewPage2();
+        //   },
+        // ),
+        // Container(
+        //    padding: EdgeInsets.all(10.0),
+        //    decoration: BoxDecoration(
+        //       // border: Border.all(color:Colors.blue,width: 1.0),
+        //       border:Border(
+        //         top:BorderSide(width: 1.0,color: Colors.grey),
+        //         right: BorderSide(width: 1.0,color:Colors.grey),
+        //         bottom: BorderSide(width: 1.0,color:Colors.grey),
+        //         left: BorderSide(width: 1.0,color:Colors.grey),
+        //       ),
+        //       borderRadius: BorderRadius.all(Radius.circular(100.0))
+        //     ),
+        //   child: ClipOval(
+        //     child: Text('22'),
          
-        ),)
+        // ),)
 
-          ],)
-        ],) 
-      ),
+        //   ],
+          // )
+         
+        // ],) 
+      // ),
+      body: homeListView(),
     );
   }
 }
