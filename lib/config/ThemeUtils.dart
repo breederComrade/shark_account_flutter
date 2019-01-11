@@ -13,12 +13,7 @@ class ThemeUtils {
 }
 
 // 文本样式
-class TextStyle{
 
-}
 
 
 // 编剧风格
-class Contart{
-  
-}

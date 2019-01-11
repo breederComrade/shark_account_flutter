@@ -12,16 +12,19 @@ class homeListView extends StatefulWidget {
 // 列表布局
 
 // class _homeListViewState extends State<homeListView> with AutomaticKeepAliveClientMixin {
-class _homeListViewState extends State<homeListView>  {
+class _homeListViewState extends State<homeListView> {
   //  @protected
   // bool get wantKeepAlive=>true;
 
   // 请求数据
-  List<Map> list=[];
+  List<Map> list = List();
   _getList() async {
     // print('_getList$list');
-    var homelist = await homeList();
+    List<Map> temp = [];
+    Map homelist = await homeList();
+    print(homelist);
     var sync_data = homelist['data']['sync_data'];
+    print(sync_data);
     for (var i = 0; i < sync_data.length; i++) {
       var target = sync_data[i];
       var show = target['expenditure']['show'];
@@ -30,40 +33,22 @@ class _homeListViewState extends State<homeListView>  {
         list.add(showItem);
       }
     }
-    setState(() {
-          
-        });
+
+    if (!mounted) return;
+    setState(() {});
   }
 
   void initState() {
     super.initState();
-    setState(() {
-      
-    });
   }
 
   @override
   Widget build(BuildContext context) {
-     _getList();
+    // _getList();
     return new ListView(
-      children: list.map((Map item) {
-        return Row(
-          children: <Widget>[
-           Container(
-             padding: EdgeInsets.all(5.0),
-             decoration: BoxDecoration(
-               borderRadius: BorderRadius.all(Radius.circular(100)),
-             color: Colors.grey,
-             ),
-             child:  Icon(Icons.accessibility),
-           ),
-            Expanded(
-              child: Text(item['typeName']),
-            ) ,
-            Text(item['typeID'])
-          ],
-        ); //News接收2个参数（标题和图片url）
-      }).toList(),
+      children: <Widget>[
+        Text('2')
+      ],
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shark_account_flutter/pages/home/homeListView.dart';
+import 'package:shark_account_flutter/pages/home/myDrawer.dart';
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -117,6 +118,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: MyDrawer(),
       appBar: AppBar(
         elevation: 0,
         title: Text('鱿鱼记账',
