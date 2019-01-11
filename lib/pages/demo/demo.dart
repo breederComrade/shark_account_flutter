@@ -42,7 +42,7 @@ class _Demo extends State<Demo> with TickerProviderStateMixin {
       new Chart(),
       new Account(),
       new Discover(),
-      new User(),
+      new MyInfoPage(),
     ];
   Color _tabColor = ThemeUtils.currentColorTheme;
 

@@ -44,7 +44,7 @@ class _homeListViewState extends State<homeListView>  {
 
   @override
   Widget build(BuildContext context) {
-     _getList();
+    //  _getList();
     return new ListView(
       children: list.map((Map item) {
         return Row(
