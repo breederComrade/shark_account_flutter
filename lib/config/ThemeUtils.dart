@@ -8,4 +8,17 @@ class ThemeUtils {
 
   // 当前的主题色
   static Color currentColorTheme = defaultColor;
+
+
+}
+
+// 文本样式
+class TextStyle{
+
+}
+
+
+// 编剧风格
+class Contart{
+  
 }

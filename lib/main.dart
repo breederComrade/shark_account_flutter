@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shark_account_flutter/pages/home/index.dart';
 import 'package:shark_account_flutter/pages/demo/demo.dart';
-import 'package:shark_account_flutter/util/ThemeUtils.dart';
+import 'package:shark_account_flutter/config/ThemeUtils.dart';
 import 'package:shark_account_flutter/pages/account/index.dart';
 
 void main() => runApp(MyApp());

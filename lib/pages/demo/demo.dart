@@ -4,7 +4,7 @@ import 'package:shark_account_flutter/pages/chart/index.dart';
 import 'package:shark_account_flutter/pages/user/index.dart';
 import 'package:shark_account_flutter/pages/discover/index.dart';
 import 'package:shark_account_flutter/pages/home/index.dart';
-import 'package:shark_account_flutter/util/ThemeUtils.dart';
+import 'package:shark_account_flutter/config/ThemeUtils.dart';
 
 //导航类
 class NavigationIconView {
