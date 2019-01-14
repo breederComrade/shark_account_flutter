@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(primaryColor: themeColor, fontFamily: 'PingFang SC'),
       // home: MyHomePage(title: '鲨鱼记账'),
 
-      home: Demo(title: '鲨鱼记账'),
+      home: Demo(title: '鱿鱼记账'),
       // 关闭
       debugShowCheckedModeBanner: false,
       // 生成静态路由
