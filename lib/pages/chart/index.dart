@@ -8,11 +8,14 @@ class _ChartState extends State<Chart> {
   Widget build(BuildContext context) {
     return Scaffold(
          appBar: AppBar(
-        title: Text('鲨鱼记账',
-            style: TextStyle(
-                color: Colors.black,
-                fontSize: 20.0,
-                fontWeight: FontWeight.w400)),
+           elevation: 0.0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('支出'),
+            Icon(Icons.arrow_drop_down,size: 38.0,)
+          ],
+        )
       ),
       body:Text('图表')
     );
