@@ -8,6 +8,7 @@ class _DiscoverState extends State<Discover> {
   Widget build(BuildContext context) {
         return Scaffold(
          appBar: AppBar(
+           elevation: 0.0,
         title: Text('鲨鱼记账',
             style: TextStyle(
                 color: Colors.black,
